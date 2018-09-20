@@ -62,18 +62,23 @@ class Deck(object):
 				card = Card(suit,rank)
 				self.cards.append(card)
 				
-def play_game(self):
+
+	def play_game():	
+		player1 = []
+		player2 = []
+		player3 = []
+		card = Card()
+		deck = Deck()
+		
+		for i in range(7):
+			player1.append(deck.pop_card())
+			player2.append(deck.pop_card())
+			player3.append(deck.pop_card())
+
 	
-	self.player1 = []
-	self.player2 = []
-	self.player3 = []
-	card = Card()
-        deck = Deck()
-	
-    for i in range (7):
-        self.player1.append(deck.pop_card())
-        self.player2.append(deck.pop_card())
-        self.player3.append(deck.pop_card())
+if __name__ == "__main__":
+	result = play_game()
+
 
 
 		
