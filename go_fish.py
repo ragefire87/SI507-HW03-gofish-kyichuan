@@ -5,7 +5,7 @@ Created on Thu Sep 20 14:46:14 2018
 @author: Yichuan
 """
 
-class Card(object):
+class Card():
 	suit_names =  ["Diamonds","Clubs","Hearts","Spades"]
 	rank_levels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 	faces = {1:"Ace",11:"Jack",12:"Queen",13:"King"}
@@ -21,6 +21,36 @@ class Card(object):
 
 	def __str__(self):
 		return "{} of {}".format(self.rank,self.suit)
+
+class Hand():
+    """ A hand of playing cards. """
+    def __init__(self):
+        self.cards = []
+        
+    def __str__(self):
+        if self.cards:
+           rep = ""
+           for card in self.cards:
+               rep += str(card) + "  "
+        else:
+            rep = "<empty>"
+        return rep
+
+    def clear(self):
+        self.cards = []
+
+    def add(self, card):
+        self.cards.append(card)
+
+    def give(self, card, other_hand):
+        self.cards.remove(card)
+        other_hand.add(card)
+
+    def check(self,player):
+        print(player1)
+        for self.cards in rep:
+            print("i")
+
 
 class Deck(object):
 	def __init__(self): # Don't need any input to create a deck of cards
@@ -62,18 +92,15 @@ class Deck(object):
 				card = Card(suit,rank)
 				self.cards.append(card)
 				
-	def play_game(self):
+def play_game(self):
+	player1 = Deck()
+	player2 = Deck()
+	player1.shuffle()
+	player2.shuffle()
 	
-		player1 = []
-		player2 = []
-		player3 = []
-		card = Card()
-		deck = Deck()
-	
-for i in range(7):
-	player1.append(deck.pop_card())
-	player2.append(deck.pop_card())
-	player3.append(deck.pop_card())
+        for i in range(7):
+                player1.append(deck.pop_card())
+                player2.append(deck.pop_card())
 
 
 
