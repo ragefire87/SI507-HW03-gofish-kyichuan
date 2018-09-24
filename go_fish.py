@@ -103,6 +103,10 @@ def play_game(self):
 		player2.append(deck.pop_card())
 
 play_game()
-print("Please ask for a rank number (1 to 13).")
-
-		
+while True:
+	ask_rank = input("Please ask for a rank (1 to 13):")
+	if ask_rank == "quit":
+		break
+	else:
+		print("wait for another player's response")
+	
