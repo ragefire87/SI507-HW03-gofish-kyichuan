@@ -4,7 +4,7 @@ Created on Thu Sep 20 14:46:14 2018
 
 @author: Yichuan
 """
-
+import random
 class Card():
 	suit_names =  ["Diamonds","Clubs","Hearts","Spades"]
 	rank_levels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
@@ -93,15 +93,16 @@ class Deck(object):
 				self.cards.append(card)
 				
 def play_game(self):
-	player1 = Deck()
-	player2 = Deck()
-	player1.shuffle()
-	player2.shuffle()
+	player1 = []
+	player2 = []
+	deck = Deck()
+	deck.shuffle()
 	
         for i in range(7):
-                player1.append(deck.pop_card())
-                player2.append(deck.pop_card())
+        	player1.append(deck.pop_card())
+		player2.append(deck.pop_card())
 
-
+play_game()
+print("Please ask for a rank number (1 to 13).")
 
 		
