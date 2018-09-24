@@ -92,14 +92,13 @@ class Deck(object):
 				card = Card(suit,rank)
 				self.cards.append(card)
 				
-def play_game(self):
+def play_game():
 	player1 = []
 	player2 = []
 	deck = Deck()
 	deck.shuffle()
-	
-        for i in range(7):
-        	player1.append(deck.pop_card())
+	for i in range(7):
+		player1.append(deck.pop_card())
 		player2.append(deck.pop_card())
 
 play_game()
